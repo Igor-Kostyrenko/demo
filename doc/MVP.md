@@ -25,5 +25,9 @@
 
 2.1 Створення додатку за допомогою графічного інтерфейсу argocd:
 
+![](https://github.com/Igor-Kostyrenko/demo/blob/main/doc/Screen.gif))
 
 
+2.2 Демонтрація роботи додатку
+
+[![asciicast](https://asciinema.org/a/586533.svg)](https://asciinema.org/a/586533)
