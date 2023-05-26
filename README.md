@@ -1,8 +1,8 @@
 | NAME | PROMPT | DESCRIPTION | EXAMPLE |
 |------|--------|-------------|---------|
 | Pod | Create a YAML manifest for a Pod. | Define a single instance of a containerized application. | [YAML Example](yaml/app-pod.yaml) |
-| Deployment | Create a YAML manifest for a Deployment. | Define a declarative way to manage a set of replicated Pods. | [YAML Example](/workspaces/demo/yaml/app-deployment.yaml) |
-| Service | Create a YAML manifest for a Service. | Expose an application running on a set of Pods as a network service. | [YAML Example](yaml/app-configmap.yaml)) |
+| Deployment | Create a YAML manifest for a Deployment. | Define a declarative way to manage a set of replicated Pods. | [YAML Example](yaml/app-deployment.yaml) |
+| Service | Create a YAML manifest for a Service. | Expose an application running on a set of Pods as a network service. | [YAML Example](yaml/app-service.yaml) |
 | Ingress | Create a YAML manifest for an Ingress. | Configure external access to services in a cluster. | [YAML Example](https://kubernetes.io/docs/concepts/services-networking/ingress/#simple-fanout) |
 | ConfigMap | Create a YAML manifest for a ConfigMap. | Store non-confidential data as key-value pairs. | [YAML Example](yaml/app-configmap.yaml)) |
 | Secret | Create a YAML manifest for a Secret. | Store confidential data, such as passwords or API keys. | [YAML Example](https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets) |
