@@ -1,6 +1,6 @@
 | NAME                  | PROMPT                                           | DESCRIPTION                                                         | EXAMPLE                                                            |
 |-----------------------|--------------------------------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------|
-| app.yaml              | Manifest for creating a Kubernetes Deployment     | This manifest defines a Deployment resource for an application       | [app.yaml example](yaml/app.yaml)                    |
+| app.yaml              | Manifest for creating a Kubernetes Pod     | This manifest defines a Deployment resource for an application       | [app.yaml example](yaml/app.yaml)                    |
 | app-livenessProbe.yaml | Manifest for configuring liveness probe           | This manifest demonstrates how to configure a liveness probe        | [app-livenessProbe.yaml example](yaml/app-livenessProbe.yaml) |
 | app-readinessProbe.yaml| Manifest for configuring readiness probe          | This manifest demonstrates how to configure a readiness probe       | [app-readinessProbe.yaml example](yaml/app-readinessProbe.yaml) |
 | app-volumeMounts.yaml  | Manifest for defining volume mounts               | This manifest shows how to define volume mounts for a container     | [app-volumeMounts.yaml example](yaml/app-volumeMounts.yaml) |
