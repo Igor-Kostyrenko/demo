@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bbrc-pod
+  labels:
+    app: bbrc
+spec:
+  containers:
+  - name: bbrc
+    image: nickp6/bbrc:v1.0.0
+    ports:
+    - containerPort: 8080

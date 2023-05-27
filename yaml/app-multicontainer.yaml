@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-multi
+spec:
+  containers:
+  - name: image1
+    image: nickp6/bbrc:v1.0.0
+    ports:
+    - containerPort: 8080
+  - name: image2
+    image: curlimages/curl
+    command: ["/bin/sh", "-c"]
+    args: ["while true; do curl -s http://localhost:8080; sleep 1; done"]

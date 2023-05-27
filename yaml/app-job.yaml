@@ -1,0 +1,37 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-rsync
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: image1
+        image: nickp6/bbrc:v1.0.0
+        command: ["/bin/sh", "-c"]
+        args: ["sleep 5; ls /tmp/etc"]
+        volumeMounts:
+        - name: dd
+          mountPath: /tmp/etc
+      - name: image2
+        image: nickp6/bbrc:v2.0.0
+        command: ["cp", "-r", "/etc", "/tmp"]
+        volumeMounts:
+        - name: ds
+          mountPath: /tmp/etc
+      - name: image3
+        image: eeacms/rsync
+        command: ["rsync", "-avz", "/ds/", "/dd/"]
+        volumeMounts:
+        - name: dd
+          mountPath: /dd
+        - name: ds
+          mountPath: /ds
+      volumes:
+      - name: dd
+        emptyDir: {}
+      - name: ds
+        emptyDir: {}
+  backoffLimit: 4

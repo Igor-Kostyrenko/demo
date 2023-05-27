@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bbrc-pod
+spec:
+  containers:
+  - name: bbrc-container
+    image: nickp6/bbrc:v1.0.0
+    ports:
+    - containerPort: 8080
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
+    readinessProbe:
+      httpGet:
+        path: /ready
+        port: 8080
